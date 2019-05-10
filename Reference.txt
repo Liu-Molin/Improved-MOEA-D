@@ -1,0 +1,40 @@
+[1] K. Miettinen, Nonlinear Multiobjective Optimization. Norwell, MA: Kluwer, 1999.
+[2] K. Deb, Multi-Objective Optimization using Evolutionary Algorithms. New York: Wiley, 2001.
+[3] C. A. C. Coello, D. A. V. Veldhuizen, and G. B. Lamont, Evolutionary Algorithms for Solving Multi-Objective Problems. Norwell, MA: Kluwer, 2002.
+[4] K. Tan, E. Khor, and T. Lee, Multiobjective Evolutionary Algorithms and Applications, ser. Advanced Information and Knowledge Pro- cessing. Berlin, Germany: Springer-Verlag, 2005.
+[5] E. Polak, “On the approximation of solutions to multiple criteria decision making problems,” in Multiple Criteria Decision Making, M. Zeleny, Ed. Berlin, Germany: Springer-Verlag, 1976, vol. 123, Lec- ture Notes in Economics and Mathematical Systems, pp. 271–282.
+[6] S. Helbig, “On a constructive approximation of the efficient outcomes in bicriterion vector optimization,” J. Global Optim., vol. 5, pp. 35–48, 1994.
+[7] M. Wiecek, W. Chen, and J. Zhang, “Piecewise quadratic approxima- tion of the non-dominated set for bi-criteria programs,” J. Multi-Cri- teria Decision Analysis, vol. 10, no. 1, pp. 35–47, 2001.
+[8] S. Ruzika and M. Wiecek, “Approximation methods in multiobjective programming,” J. Optim. Theory Appl., vol. 126, no. 3, pp. 473–501, Sep. 2005.
+[9] I. Das and J. E. Dennis, “Normal-bounday intersection: A new method for generating Pareto optimal points in multicriteria optimization prob- lems,” SIAM J. Optim., vol. 8, no. 3, pp. 631–657, Aug. 1998.
+[10] A.Messac,A.Ismail-Yahaya,andC.Mattson,“Thenormalizednormal constraint method for generating the Pareto frontier,” Struct Multidisc. Optim., vol. 25, pp. 86–98, 2003.
+[11] C. A. Mattson, A. A. Mullur, and A. Messac, “Smart Pareto filter: Ob- taining a minimal representation of multiobjective design space,” Eng. Optim., vol. 36, no. 6, pp. 721–740, 2004.
+[12] C. A. C. Coello, “An updated survey of GA-based multiobjective opti- mization techniques,” ACM Comput. Surv., vol. 32, no. 2, pp. 109–143, 2000.
+[13] E. Zitzler and L. Thiele, “Multiobjective evolutionary algorithms: A comparative case study and the strength Pareto approach,” IEEE Trans. Evol. Comput., vol. 3, no. 4, pp. 257–271, Nov. 1999.
+[14] J. D. Knowles and D. W. Corne, “The Pareto archived evolution strategy: A new baseline algorithm for multiobjective optimisation,” in Proc. Congr. Evol. Comput., Washington, D.C., Jul. 1999, pp. 98–105.
+[15] E. Zitzler, M. Laumanns, and L. Thiele, “SPEA2: Improving the strength Pareto evolutionary algorithm for multiobjective optimiza- tion,” in Proc. Evolutionary Methods for Design Optimization and Control with Applications to Industrial Problems, K. C. Gian- nakoglou, D. T. Tsahalis, J. Périaux, K. D. Papailiou, and T. Fogarty, Eds., Athens, Greece, pp. 95–100.
+[16] K. Deb, S. Agrawal, A. Pratap, and T. Meyarivan, “A fast and elitist multiobjective genetic algorithm: NSGA-II,” IEEE Trans. Evol. Comput., vol. 6, no. 2, pp. 182–197, Apr. 2002.
+[17] H.LuandG.G.Yen,“Rank-density-basedmultiobjectivegeneticalgo- rithm and benchmark test function study,” IEEE Trans. Evol. Comput., vol. 7, no. 4, pp. 325–343, Aug. 2003.
+[18] T. Okabe, Y. Jin, B. Sendhoff, and M. Olhofer, “Voronoi-based esti- mation of distribution algorithm for multi-objective optimization,” in Congress on Evolutionary Computation (CEC), Y. Shi, Ed. Piscat- away, NJ: IEEE Press, 2004, pp. 1594–1602.
+[19] C. A. C. Coello, G. T. Pulido, and M. S. Lechuga, “Handling mul- tiple objectives with particle swarm optimization,” IEEE Trans. Evol. Comput., vol. 8, no. 3, pp. 256–279, Jun. 2004.
+[20] D. A. V. Veldhuizen and G. B. Lamont, “Multiobjective evolutionary algorithms: Analyzing the state-of-the-art,” Evol. Comput., vol. 8, no. 2, pp. 125–147, 2000.
+[21] J. D. Knowles and D. Corne, “Properties of an adaptive archiving algo- rithm for storing nondominated vectors,” IEEE Trans. Evol. Comput., vol. 7, no. 2, pp. 100–116, Apr. 2003.
+[22] Q. Zhang, A. Zhou, and Y. Jin, “Modelling the regularity in an estima- tion of distribution algorithm for continuous multiobjective optimisa- tion with variable linkages,” Dept. Comput. Sci., Univ. Essex, Colch- ester, U.K., Tech. Rep. CSM-459, 2006, (a revised version of this paper has been accepted for publication by the IEEE Trans. Evol. Comput., 2007).
+[23] P. A. N. Bosman and D. Thierens, “The balance between proximity and diversity in multiobjective evolutionary algorithms,” IEEE Trans. Evol. Comput., vol. 7, no. 2, pp. 174–188, Apr. 2003.
+[24] J. D. Schaffer, “Multiple objective optimization with vector evaluated genetic algorithms,” in Proc. 1st Int. Conf. Genetic Algorithms, 1985, pp. 93–100.
+[25] L.PaqueteandT.Stützle,“Atwo-phaselocalsearchforthebiobjective traveling salesman problem,” in Proc. Evol. Multi-Criterion Optim., 2003, pp. 479–493.
+[26] E. J. Hughes, “Multiple single objective Pareto sampling,” in Proc. Congr. Evol. Comput., Canberra, Australia, 2003, pp. 2678–2684.
+[27] Y.Jin,T.Okabe,andB.Sendhoff,“Adaptingweightedaggregationfor multiobjective evolutionary strategies,” in Evolutionary Multicriterion Optimization. : Springer, 2001, vol. 1993, LNCS, pp. 96–110.
+[28] H. Ishibuchi and T. Murata, “Multi-objective genetic local search al- gorithm and its application to flowshop scheduling,” IEEE Trans. Syst., Man, Cybern., vol. 28, pp. 392–403, Aug. 1998.
+[29] A. Jaszkiewicz, “On the performance of multiple-objective genetic local search on the 0/1 knapsack problem – A comparative experi- ment,” IEEE Trans. Evol. Comput., vol. 6, no. 4, pp. 402–412, Aug. 2002.
+[30] Q. Zhang and Y. W. Leung, “Orthogonal genetic algorithm for multi- media multicast routing,” IEEE Trans. Evol. Comput., vol. 3, no. 1, pp. 53–62, Apr.l 1999.
+[31] N. J. W. T. J. Santers and W. I. Notz, The Design of Analysis of Com- puter Experiments. Berlin, Germany: Springer-Verlag, 2003.
+[32] E. Zitzler, L. Thiele, M. Laumanns, C. M. Fonseca, and V. G. da Fon- seca, “Performance assessment of multiobjective optimizers: An anal- ysis and review,” IEEE Trans. Evol. Comput., vol. 7, no. 2, pp. 117–132, Apr. 2003.
+[33] E. Zitzler, K. Deb, and L. Thiele, “Comparison of multiobjective evo- lutionary algorithms: Empirical results,” Evol. Comput., vol. 8, no. 2, pp. 173–195, 2000.
+[34] K.Deb,L.Thiele,M.Laumanns,andE.Zitzler,“Scalablemultiobjec- tive optimization test problems,” in Proc. Congr. Evol. Comput., May 2002, vol. 1, pp. 825–830.
+[35] R. E. Steuer, Multiple Criteria Optimization: Theory, Computation and Application. New York: Wiley, 1986.
+[36] M. Gen and R. Cheng, Genetic Algorithms and Engineering Design. New York: Wiley, 1997.
+[37] P. J. Bentley and J. P. Wakefield, “Finding acceptable solutions in the Pareto-optimal range using multiobjective genetic algorithms,” in Proc. 2nd On-Line World Conf. Soft Comput. Eng. Design Manuf., Jun. 1997, pp. 231–240.
+[38] I. C. Parmee and D. Cvetkovic, “Preferences and their application in evolutionary multiobjective optimization,” IEEE Trans. Evol. Comput., vol. 6, no. 1, pp. 42–57, Feb. 2002.
+[39] M. Ehrgott, Multicriteria Optimization, 2nd ed. Berlin, Germany: Springer-Verlag, 2005.
+[40] T. Murata, H. Ishibuchi, and M. Gen, “Specification of Genetic Search Direction in Cellular Multiobjective Genetic Algorithm,” in Evolutionary Multicriterion Optimization. Berlin, Germany: Springer-Verlag, 2001, LNCS1993, pp. 82–95.

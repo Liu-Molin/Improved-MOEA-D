@@ -1,0 +1,49 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build C++",
+            "type": "shell",
+            "command": "g++-7",
+            "args":[
+                "-g",
+                "-Wall",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}.o",
+                "${fileDirname}/${fileBasenameNoExtension}.cpp",
+                "-I/usr/local/Cellar/gsl/2.5/include",
+                "-L/usr/local/Cellar/gsl/2.5/lib/",
+                "-lgsl",
+                "--std=c++11",
+                "-m64"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Run",
+            "type": "shell",
+            "command": "python3 ${fileBasenameNoExtension}.py",
+            "args": [
+                ""
+            ],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Echo",
+            "type": "shell",
+            "command": "echo",
+            "args": [
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "group": "test"
+        }
+    ]
+}
