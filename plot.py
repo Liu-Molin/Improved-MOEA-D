@@ -91,7 +91,7 @@ def paper_EPvPF(inPath):
 	plt.savefig(outImage, bbox_inches='tight')
 def mat_plotEP_PF(inPath):
 	risk, income = np.loadtxt(inPath, unpack='true')
-	outFolder = "/Users/meow/Desktop/DP/MOEA-D/Output/PF"
+	outFolder = "/home/lusso/Documents/MOEA-D/Resource/PF"
 	PFPath = utilis.getLatest(outFolder, "PF")
 	PFPath = os.path.join(PFPath, "PF_conv.txt")
 	pf_risk, pf_income = np.loadtxt(PFPath, unpack='true')

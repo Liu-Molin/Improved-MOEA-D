@@ -29,18 +29,24 @@ def getOutPath(outDir, preFix, type=None):
 def getLatest(inDir, preFix, type=None):
 	inDirFiles =os.listdir(inDir)
 	i = 0
-	if type!=None:
-		tempDirName = preFix+'-'+str(i)+'.'+str(type)
-	else:
-		tempDirName = preFix+'-'+str(i)
+	tempDirName = (preFix+"-%d"%i)
+	if(type!=None):
+		tempDirName+=(".%s"%str(type))
+	if tempDirName in inDirFiles:
+		return os.path.join(inDir, tempDirName)
+	
+	i+=1
+	tempDirName = (preFix+"-%d"%i)
+	if(type!=None):
+		tempDirName+=(".%s"%str(type))
 	while tempDirName in inDirFiles:
 		i+=1
-		if type!=None:
-			tempDirName = preFix+'-'+str(i)+'.'+str(type)
-		else:
-			tempDirName = preFix+'-'+str(i)
-	if type!=None:
-		tempDirName = preFix+'-'+str(i-1)+'.'+str(type)
-	else:
-		tempDirName = preFix+'-'+str(i-1)
+		tempDirName = (preFix+"-%d"%i)
+		if(type!=None):
+			tempDirName+=(".%s"%str(type))
+	tempDirName = (preFix+"-%d"%(i-1))
+	if(type!=None):
+		tempDirName+=(".%s"%str(type))
 	return os.path.join(inDir, tempDirName)
+	
+

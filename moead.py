@@ -23,7 +23,7 @@ def batchJob(id, N, T, iterations, mix_percentage, outPath):
 					str(iterations) +" "
 					+ str(mix_percentage)
 					)
-	print(moead_command)
+	#print(moead_command)
 	os.system(moead_command)
 	config_file = open(os.path.join(outPath, 'config.txt'), 'w')
 	config_file.write("File:\t%s\n"%str(id))
@@ -32,10 +32,9 @@ def batchJob(id, N, T, iterations, mix_percentage, outPath):
 	config_file.write("Neighbor:\t%s\n"%str(T))
 	config_file.write("Percentage:\t%s%%"%str(float(mix_percentage)*100))
 	config_file.close()
-	plot.plotMOEAD(outPath)
-	dataAnalysis.analysisPF(outPath)
+	#plot.plotMOEAD(outPath)
+	#dataAnalysis.analysisPF(outPath)
 	#dataAnalysis.formatPlot_Test(outPath+'/EP.txt') 
-	
 if __name__ == "__main__":
 	#singleRun()
 	id = input("Which data:\t")

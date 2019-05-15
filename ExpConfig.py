@@ -8,8 +8,9 @@
 # Copyright  © Rockface 2019 - 2019
 # --------------------------------------------------------------
 
-import os, sys, multiprocessing, tqdm
+import os, sys, multiprocessing, tqdm, shutil
 import pandas as pd
+from numba import jit
 import utilis
 import moead
 
@@ -35,6 +36,7 @@ def loadConfig():
     for i in tqdm.tqdm(range(len(config['Algorithm Type']))):
         subExpFolder = "Exp"+'-'+str(i)
         subExpFolder = os.path.join(experimentFolder, subExpFolder)
+        print(subExpFolder)
         os.mkdir(subExpFolder)
         if config['Algorithm Type'].iloc[i]=='moead':
             experiment_moead(
@@ -45,22 +47,27 @@ def loadConfig():
                 config['Generation'].iloc[i],
                 config['Mix rate'].iloc[i]
                 )
-
+@jit(parallel=True)
 def experiment_moead(outPath, dataid, N, T, G, MR):
     print(dataid, N, T, G, MR)
     p = multiprocessing.Pool(os.cpu_count())
     subTest_list = []
-    for i in range(5):
+    num_subTest = 4
+
+    for i in range(num_subTest):
         subTestFolder = "Test-"+str(i)
         subTestFolder = os.path.join(outPath, subTestFolder)
         os.mkdir(subTestFolder)
         subTest_list.append(subTestFolder)
 
-    for i in range(5):
+    for i in range(num_subTest):
         p.apply_async(moead.batchJob, args=(dataid, N, T, G, MR, subTest_list[i]))
-
     p.close()
     p.join()
+
+@jit(parallel=True)
+def analysisExp():
+    pass
 def experiment_nsga2(dataid, N, MM, G, MR):
     pass
 if __name__ == "__main__":

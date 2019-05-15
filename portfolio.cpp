@@ -12,7 +12,7 @@
 #include "util_fileloader.h"
 #include "moead.h"
 int main(int argc, char *argv[]){
-    std::cerr<<"[Start]:\tMOEA/D\n";
+    //std::cerr<<"[Start]:\tMOEA/D\n";
     std::string outPath = argv[1];
     std::string id = argv[2];
     int input_N = atoi(argv[3]);
@@ -30,26 +30,26 @@ int main(int argc, char *argv[]){
 
     //Portfolio Start here.
     Constraint portfolioProblem = Constraint(input_N, input_T);
-    std::cerr<<"[Init]:\tStart Initial Lamb\n";
+    //std::cerr<<"[Init]:\tStart Initial Lamb\n";
     struct Lamb*lamb = init_lamb(input_N, input_T);
     
-    std::cerr<<"[Init]:\tInitial Lamb Complete\n";
+    //std::cerr<<"[Init]:\tInitial Lamb Complete\n";
     //Parameters setting.
 
     struct asset*portfolioAsset;
     //I. Load data set
-    std::cerr<<"[Init]:\tLoad Complete\n";
+    //std::cerr<<"[Init]:\tLoad Complete\n";
     load_portreb(dataPath, portfolioProblem, &portfolioAsset);
 
     //II. Initialization
     //  1. Initialize population.
-    std::cout<<"[Init]:\tStart MOP Initialization\n";
+    //std::cout<<"[Init]:\tStart MOP Initialization\n";
     MOEA_D mop(portfolioProblem, &portfolioAsset, lamb, input_mix);
-    std::cout<<"[Init]:\tMOP Initialization Complete\n";
+    //std::cout<<"[Init]:\tMOP Initialization Complete\n";
     mop.ep2Txt(initEP);
     
     //III. Update
-    std::cout<<"[Update]:\tIteration Start\n[Processing]:\t";
+    //std::cout<<"[Update]:\tIteration Start\n[Processing]:\t";
     
     for(int i = 0; i<numGen; i++){
         if(i<30){
@@ -73,17 +73,17 @@ int main(int argc, char *argv[]){
         }
         mop.production(i);
         mop.z2txt(zPath);
-        std::cerr.width(4);
-        std::cerr<<int(100*i/numGen)+1<<"%";
-        std::cerr<<"\b\b\b\b\b";
+        //std::cerr.width(4);
+        //std::cerr<<int(100*i/numGen)+1<<"%";
+        //std::cerr<<"\b\b\b\b\b";
     }
-    std::cout<<std::endl;
+    //std::cout<<std::endl;
     mop.epochEP(outPath+"/EP_epoch.txt");
     mop.epochEP_N(outPath+"/EP_epoch_N.txt");
     mop.ep2Txt(outPath+"/EP_old.txt");
     mop.vEP2txt(outPath+"/EP.txt");
     mop.epGene2txt(outPath+"/EP_gene.txt");
     //Deconstruction
-    std::cout<<"\n[END]:\tEnd of Portfolio.\n";
+    //std::cout<<"\n[END]:\tEnd of Portfolio.\n";
     free(portfolioAsset);
 }

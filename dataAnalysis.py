@@ -11,6 +11,7 @@
 import os, sys, fileinput, time, math
 import plot, utilis
 import pandas as pd
+from numba import jit
 import tqdm
 
 import multiprocessing
@@ -182,7 +183,7 @@ def getLatestZ():
 	return value
 
 def getLatestPF():
-	outPath = "/Users/meow/Desktop/DP/MOEA-D/Output/PF"
+	outPath = "/home/lusso/Documents/MOEA-D/Resource/PF"
 	PFPath = utilis.getLatest(outPath, "PF")
 	PFPath = os.path.join(PFPath, "PF.txt")
 	return PFPath
