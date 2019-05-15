@@ -14,8 +14,7 @@ import utilis
 import multiprocessing
 basePath = os.path.abspath(os.path.curdir)
 #basePath = "/Users/meow/Desktop/DP/Code"
-def batchJob(id, N, T, iterations, mix_percentage):
-	outPath = utilis.getOutPath(os.path.join(basePath, 'Output/MOEA-D'), "Test")
+def batchJob(id, N, T, iterations, mix_percentage, outPath):
 	moead_command = ("./portfolio.o" + " " + 
 					outPath + " " +
 					str(id) + " " + 
@@ -25,7 +24,6 @@ def batchJob(id, N, T, iterations, mix_percentage):
 					+ str(mix_percentage)
 					)
 	print(moead_command)
-	os.mkdir(outPath)
 	os.system(moead_command)
 	config_file = open(os.path.join(outPath, 'config.txt'), 'w')
 	config_file.write("File:\t%s\n"%str(id))
@@ -37,33 +35,6 @@ def batchJob(id, N, T, iterations, mix_percentage):
 	plot.plotMOEAD(outPath)
 	dataAnalysis.analysisPF(outPath)
 	#dataAnalysis.formatPlot_Test(outPath+'/EP.txt') 
-def singleRun():
-	outPath = utilis.getOutPath(os.path.join(basePath, 'Output/MOEA-D'), "Test")
-	id = input("Which data:\t")
-	N = input("Num of solutions:\t") 
-	T = input("Num of neighbors:\t")
-	iterations = input("Num of iterations:\t")
-	mix_percentage = input("Low assets %:\t")
-	moead_command = ("./portfolio.o" + " " + 
-					outPath + " " +
-					str(id) + " " + 
-					str(N) + " " + 
-					str(T) + " " + 
-					str(iterations) +" "
-					+ str(mix_percentage)
-					)
-	os.mkdir(outPath)
-	os.system(moead_command)
-
-
-	config_file = open(os.path.join(outPath, 'config.txt'), 'w')
-	config_file.write("File:\t%s\n"%str(id))
-	config_file.write("Iterations:\t%s\n"%str(iterations))
-	config_file.write("Population:\t%s\n"%str(N))
-	config_file.write("Neighbor:\t%s\n"%str(T))
-	config_file.write("Percentage:\t%s%%"%str(mix_percentage))
-	config_file.close()
-	plot.plotMOEAD(outPath)
 	
 if __name__ == "__main__":
 	#singleRun()

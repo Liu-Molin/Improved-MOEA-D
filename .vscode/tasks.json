@@ -16,6 +16,7 @@
                 "-I/usr/local/Cellar/gsl/2.5/include",
                 "-L/usr/local/Cellar/gsl/2.5/lib/",
                 "-lgsl",
+                "-lgslcblas",
                 "--std=c++11",
                 "-m64"
             ],

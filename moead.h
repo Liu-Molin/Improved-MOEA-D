@@ -499,7 +499,7 @@ private:
             }
             updateZ(population[i]);
         }
-        std::string resourcePath = "/Users/meow/Desktop/DP/MOEA-D/Resource/10000.txt";
+        std::string resourcePath = "Resource/10000.txt";
         loadGene(resourcePath, population, int(size*mix), size);
         for(int i = int(size*mix); i<size; i++){
             //randomHighland(&population[i]);

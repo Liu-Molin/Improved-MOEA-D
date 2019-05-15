@@ -24,7 +24,7 @@ int main(int argc, char *argv[]){
     std::string initEP_raw = outPath+"/EP_raw.txt";
     std::string initEP = outPath+"/initEP.txt";
     ///std::cout<<initEP<<std::endl;
-    std::string dataPath = ("/Users/meow/Desktop/DP/Code/DataSet/portreb"+id+".txt");
+    std::string dataPath = ("DataSet/portreb"+id+".txt");
     std::string zPath = outPath + "/z.txt";
     std::ofstream output;
 
